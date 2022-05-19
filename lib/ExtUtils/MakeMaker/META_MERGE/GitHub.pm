@@ -15,7 +15,7 @@ Plugin to your Makefile.PL
 
   use ExtUtils::MakeMaker;
   use ExtUtils::MakeMaker::META_MERGE::GitHub;
-  my $mm = ExtUtils::MakeMaker::META_MERGE::GitHub->new(owner=>'myowner', repo=>'myrepo');
+  my $mm = ExtUtils::MakeMaker::META_MERGE::GitHub->new(owner=>"myowner", repo=>"myrepo");
   WriteMakefile(
                 ...
                 $mm->META_MERGE,
@@ -26,8 +26,8 @@ Copy and paste into your Makefile.PL
 
   use ExtUtils::MakeMaker::META_MERGE::GitHub;
   use Data::Dumper qw{Dumper};
-  my $mm = ExtUtils::MakeMaker::META_MERGE::GitHub->new(owner=>'myowner', repo=>'myrepo');
-  my %META_MERGE = $obj->META_MERGE;
+  my $mm = ExtUtils::MakeMaker::META_MERGE::GitHub->new(owner=>"myowner", repo=>"myrepo");
+  my %META_MERGE = $mm->META_MERGE;
   print Dumper(\%META_MERGE);
 
 =head1 DESCRIPTION

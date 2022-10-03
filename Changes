@@ -1,4 +1,11 @@
 Revision history for Perl extension ExtUtils::MakeMaker::META_MERGE::GitHub.
 
+0.03 2022-10-02
+  - Removed author test from CPAN distribution
+  - Updated spec file - added requirement for git command for script
+
+0.02 2022-05-22
+  - Added script perl-ExtUtils-MakeMaker-META_MERGE-GitHub.pl
+
 0.01 2022-05-19
   - original version; created by h2xs 1.23 with options

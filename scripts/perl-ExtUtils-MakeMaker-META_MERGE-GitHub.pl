@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker::META_MERGE::GitHub;
 use Data::Dumper qw{Dumper};
+$Data::Dumper::Indent  = 1; #smaller index
+$Data::Dumper::Terse   = 1; #remove $VAR1 header
 
 my $login_default = ""; #future
 my $host_default  = ""; #future

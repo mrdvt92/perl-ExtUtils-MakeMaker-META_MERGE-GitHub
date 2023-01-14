@@ -6,10 +6,10 @@ use Data::Dumper qw{Dumper};
 $Data::Dumper::Indent  = 1; #smaller index
 $Data::Dumper::Terse   = 1; #remove $VAR1 header
 
-my $login_default = ""; #future
-my $host_default  = ""; #future
-my $owner_default = "";
-my $repo_default  = "";
+my $login_default = ''; #future
+my $host_default  = ''; #future
+my $owner_default = '';
+my $repo_default  = '';
 my @return        = qx{git remote -v 2> /dev/null};
 if (@return) {
   my $line  = $return[0];
@@ -31,7 +31,10 @@ if (@return) {
 my $syntax     = qq{Syntax: $0 owner repository_name\n};
 my $owner      = shift || $owner_default or die($syntax);
 my $repo       = shift || $repo_default  or die($syntax);
-my $mm         = ExtUtils::MakeMaker::META_MERGE::GitHub->new(owner=>$owner, repo=>$repo);
+my $mm         = ExtUtils::MakeMaker::META_MERGE::GitHub->new(
+                   owner => $owner,
+                   repo  => $repo,
+                 );
 my %META_MERGE = $mm->META_MERGE;
 print Dumper(\%META_MERGE);
 
